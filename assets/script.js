@@ -27,10 +27,20 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
     $("#city-view").text(JSON.stringify(response));
-       if (searchHistory.push(search));
-        localStorage.setItem("search-history", JSON.stringify(search));
-
+       if (searchHistory.push(city));
+        localStorage.setItem("search-history", JSON.stringify(city));
+      //return value of feild
       searchHistorySection.html("")
+       // loop through array of cities
+      for( let i = 0; i < searchHistory.length; i++){
+        // generating button for each city
+        let button = $("<button>");
+        button.attr("type", "button")
+        button.text(searchHistory[i])
+        button.addClass("history-btn btn-history")
+        button.attr("data-search", searchHistory[i])
+        searchHistorySection.append(button)
+      }
     ;
   });
 //console title city value:
