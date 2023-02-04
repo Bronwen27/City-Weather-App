@@ -1,5 +1,5 @@
 // onclick to trigger the Ajax call
-$("#form-input").on("click", function(event) {
+$("#search-form").on("click", function(event) {
 
 event.preventDefault();
 
