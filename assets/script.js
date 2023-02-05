@@ -6,6 +6,8 @@ event.preventDefault();
 var city = $("#search-input").val().trim();
 // view city in console
 console.log(city)
+//console title city value:
+console.log("City value:", city);
 
 
 //API key
@@ -20,6 +22,7 @@ let searchHistorySection = $('#history')
 let searchForm = $('#search-form');
 //search text input
 let searchInput = $('#search-input');
+
 
 // calling query with ajax
 $.ajax({
@@ -40,11 +43,16 @@ $.ajax({
         button.addClass("history-btn btn-history")
         button.attr("data-search", searchHistory[i])
         searchHistorySection.append(button)
-      }
-    ;
+
+        function getWeather(location){
+          let latitude
+        }
+        getWeather(response)
+      };
+    
+      
   });
-//console title city value:
-  console.log("City value:", city);
+var currentCity = $("<h4>")
 //------------------------------------------------------------
 })
 
