@@ -17,13 +17,18 @@ let queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=$
 // search history 
 let searchHistory = []
 // search history section
-let searchHistorySection = $('#history')
+let searchHistorySection = $('#history');
 //search box form
 let searchForm = $('#search-form');
 //search text input
 let searchInput = $('#search-input');
 
+function submit(event){
+  event.preventDefault();
+  let search = searchInput.val().trim()
 
+}
+searchForm.on("submit", submit);
 // calling query with ajax
 $.ajax({
     url: queryURL,
