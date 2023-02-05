@@ -55,6 +55,7 @@ $.ajax({
         getWeather(response)
       };
     
+    
       
   });
 var currentCity = $("<h4>")
