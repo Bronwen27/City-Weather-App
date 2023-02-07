@@ -1,0 +1,29 @@
+.forecast-row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.card-body {
+    background-color: aqua;
+    padding: 100px;
+    border: 2px;
+    border-radius: 15px;
+}
+
+.card-title {
+    background-color: rgba(148, 209, 241, 0.884);
+}
+
+div.card {
+    background-color:rgba(148, 209, 241, 0.884);
+    margin-left: 10px;
+    border: 2px;
+    border-radius: 15px;
+}
+

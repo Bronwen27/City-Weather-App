@@ -63,7 +63,7 @@ $(".weather-card").append(output)
 
 }
 
-//create api call for forecast weather
+//create api call for forecast
 function displayForecast(weather){
   for(let i=0; i<5;i++){
     var skip= i *8 +4
@@ -82,6 +82,7 @@ function displayForecast(weather){
     </div>
     </div>
     `
+   
     $(".forecast-row").append(forecast)
 
   }
