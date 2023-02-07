@@ -1,3 +1,7 @@
+// add current date and time to header
+var todaysDate = moment().format("D MMM YYYY, HH:mm:ss");
+$("#time-date").text(todaysDate);
+
 // trigger event when search button clicked
 $("#search-button").on("click", function(event) {
 
@@ -41,11 +45,6 @@ displayForecast(data.list)
 })
 }
 
-// add current date and time to header
-
-var todaysDate = moment().format("D MMM YYYY, HH:mm:ss");
-$("#time-date").text(todaysDate);
-
 function displayCurrentWeather(weather){
   console.log(weather, "from display current weather function");
   $(".weather-card").empty()
@@ -58,7 +57,6 @@ function displayCurrentWeather(weather){
   <p class='weather-detail'>Temperature: ${weather.main.temp} Celsius</p>
   <p class='weather-detail'>Humidity: ${weather.main.humidity} %</p>
   <p class='weather-detail'>Wind Speed: ${weather.wind.speed} KPH</p>
-  
   
   </div>
   </div>
@@ -74,6 +72,8 @@ function displayForecast(weather){
     var skip= i *8 +4
     var day= new Date(weather[skip].dt*1000).toDateString()
     
+  //   console.log(weather, "from display forecast function");
+  // $(".forecast-row").empty()
 
     var forecast=`
     <div class=card>
@@ -91,21 +91,25 @@ function displayForecast(weather){
 
     $(".forecast-row").append(forecast)
 
+    // $("#weather-detail").empty();
+    // $("#weather-detail").append(weather[i].main.temp, weather[i].main.humidity, weather[i].wind.speed);
+    
+
   }
 }
-// calling query with ajax
+
 // $.ajax({
 //     url: queryURL,
 //     method: "GET"
 //   }).then(function(response) {
 //     $("#city-view").text(JSON.stringify(response));
 //        if (searchHistory.push(city));
-//         localStorage.setItem("search-history", JSON.stringify(city));
+//         localStorage.setItem("search-history", JSON.stringify(city));};
 //       //return value of feild
 //       searchHistorySection.html("")
 //        // loop through array of cities
 //       for( let i = 0; i < searchHistory.length; i++){
-//         // generating button for each city
+//         //generating button for each city
 //         let button = $("<button>");
 //         button.attr("type", "button")
 //         button.text(searchHistory[i])
@@ -113,11 +117,8 @@ function displayForecast(weather){
 //         button.attr("data-search", searchHistory[i])
 //         searchHistorySection.append(button)
 
-//         function getWeather(location){
-//           let latitude = $
-//         }
-//         getWeather(response)
-//       };
+//       })
+//         getWeather(response);
     
     
       

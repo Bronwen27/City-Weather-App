@@ -33,7 +33,12 @@ body {
 .card-title {
     background-color: rgba(27, 169, 241, 0.884);
     border-radius: 25px;
-    font-family:cursive
+    font-family:cursive;
+    font-size:x-large;
+}
+
+h3.card-title {
+    font-size: x-large;
 }
 
 div.card {
