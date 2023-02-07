@@ -15,6 +15,7 @@ In this project I have used HTML, CSS, JavaScript, JQuery, Moment.js, Bootstrap 
 
 ## Deployed Link:
 
+https://bronwen27.github.io/City-Weather-App/
 
 ## Usage
 
