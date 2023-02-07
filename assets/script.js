@@ -14,17 +14,6 @@ console.log(city)
 console.log("City value:", city);
 apiCall(city)
 
-searchHistory.push(search);
-localStorage.setItem("search-history", JSON.stringify(searchHistory));
-searchHistorySection.html("")
-for(let i = 0; i < searchHistory.length; i++){
-  let btn = $("<button>");
-  btn.attr("type", "button")
-  btn.addClass("history-btn btn-history")
-  btn.attr("data-search", searchHistory[i])
-  btn.text(searchHistory[i])
-  searchHistorySection.append(btn)
-}
 })
 
 //API key
