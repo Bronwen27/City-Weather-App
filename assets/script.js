@@ -1,4 +1,4 @@
-// onclick to trigger the Ajax call
+// trigger event when search button clicked
 $("#search-button").on("click", function(event) {
 
 event.preventDefault();
@@ -20,15 +20,11 @@ let searchHistory = []
 // search history section
 let searchHistorySection = $('#history');
 //search box form
-//et searchForm = $('#search-form');
+
 //search text input
 let searchInput = $('#search-input');
 
-//function submit(event){
- // event.preventDefault();
-  //let search = searchInput.val().trim()
-
-//}
+//call information from api
 function apiCall(city){
   let queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`;
 fetch(queryURL)
@@ -67,6 +63,7 @@ $(".weather-card").append(output)
 
 }
 
+//create api call for forecast weather
 function displayForecast(weather){
   for(let i=0; i<5;i++){
     var skip= i *8 +4
