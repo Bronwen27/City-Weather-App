@@ -68,6 +68,7 @@ function displayForecast(weather){
   for(let i=0; i<5;i++){
     var skip= i *8 +4
     var day= new Date(weather[skip].dt*1000).toDateString()
+    
 
     var forecast=`
     <div class=card>
@@ -82,7 +83,7 @@ function displayForecast(weather){
     </div>
     </div>
     `
-   
+
     $(".forecast-row").append(forecast)
 
   }
