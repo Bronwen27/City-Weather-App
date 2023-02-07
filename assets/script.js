@@ -61,20 +61,19 @@ function displayCurrentWeather(weather){
   </div>
   </div>
   `
+// add todays weather to page
 $(".weather-card").append(output)
   
-
 }
 
 //create api call for forecast
 function displayForecast(weather){
+  $('.forecast-row').text('')
   for(let i=0; i<5;i++){
     var skip= i *8 +4
     var day= new Date(weather[skip].dt*1000).toDateString()
     
   //   console.log(weather, "from display forecast function");
-  // $(".forecast-row").empty()
-
     var forecast=`
     <div class=card>
     <div class='card-header'>
@@ -88,44 +87,11 @@ function displayForecast(weather){
     </div>
     </div>
     `
-
+    // add five day forecast to page
     $(".forecast-row").append(forecast)
 
-    // $("#weather-detail").empty();
-    // $("#weather-detail").append(weather[i].main.temp, weather[i].main.humidity, weather[i].wind.speed);
-    
+    }}
 
-  }
-}
-
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-//   }).then(function(response) {
-//     $("#city-view").text(JSON.stringify(response));
-//        if (searchHistory.push(city));
-//         localStorage.setItem("search-history", JSON.stringify(city));};
-//       //return value of feild
-//       searchHistorySection.html("")
-//        // loop through array of cities
-//       for( let i = 0; i < searchHistory.length; i++){
-//         //generating button for each city
-//         let button = $("<button>");
-//         button.attr("type", "button")
-//         button.text(searchHistory[i])
-//         button.addClass("history-btn btn-history")
-//         button.attr("data-search", searchHistory[i])
-//         searchHistorySection.append(button)
-
-//       })
-//         getWeather(response);
-    
-    
-      
-//   });
-// var currentCity = $("<h4>")
-
-//------------------------------------------------------------
 
 
 
