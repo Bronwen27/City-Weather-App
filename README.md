@@ -18,6 +18,9 @@ In this project I have used HTML, CSS, JavaScript, JQuery, Moment.js, Bootstrap 
 
 ## Usage
 
+![image of weather-app](/assets/images/Screenshot1.png)
+
+![image of js code relating to weather-app](/assets/images/Screenshot2.png)
 
 ### License
 
