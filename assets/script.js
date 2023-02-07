@@ -13,7 +13,6 @@ apiCall(city)
 
 //API key
 let APIKey = "d0736665d026d198ed2e5a4eedc5ac57";
-// creating query
 
 // search history 
 let searchHistory = []
@@ -42,6 +41,11 @@ displayForecast(data.list)
 })
 }
 
+// add current date and time to header
+
+var todaysDate = moment().format("D MMM YYYY, HH:mm:ss");
+$("#time-date").text(todaysDate);
+
 function displayCurrentWeather(weather){
   console.log(weather, "from display current weather function");
   $(".weather-card").empty()
@@ -54,6 +58,7 @@ function displayCurrentWeather(weather){
   <p class='weather-detail'>Temperature: ${weather.main.temp} Celsius</p>
   <p class='weather-detail'>Humidity: ${weather.main.humidity} %</p>
   <p class='weather-detail'>Wind Speed: ${weather.wind.speed} KPH</p>
+  
   
   </div>
   </div>
